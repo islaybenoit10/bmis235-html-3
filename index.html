@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--
   Author: Islay Benoit
@@ -10,17 +11,12 @@
 <meta name="author" content="Islay Benoit">
 <title>Home</title>
 
-<!-- this one line connects the page to the stylesheet -->
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- ===== MENU ============================================================
-     The menu is four links. Each link wraps an image instead of words.
-     Build it once on this page, check that every link works,
-     then copy the whole <nav> block and paste it over the menu on the
-     other three pages, so every page has the exact same menu.
-     ===================================================================== -->
+<!-- Navigation menu -->
 <nav>
     <a href="index.html"><img src="img/Home.png" alt="Home"></a>
     <a href="Scotland.html"><img src="img/Scotland.png" alt="Scotland"></a>
@@ -29,75 +25,217 @@
 </nav>
 
 <h1>Home</h1>
-<p>Welcome to my home page! .</p>
-<p> I am going to showcase my three favorite places I have travelled to so far: Scotland, Itlay, and Puerto Rico.</p>
-  <p> Want to get in touch? 
-  <a href= "Mailto: ibenoit@zagmail.gonzaga.edu"> Email me! </a></p>
 
-<!-- ===== SHOWCASE ======================================================
-     This box is empty on purpose. In Part 7 you paste an interactive
-     graphic BETWEEN the opening <div> and the closing </div> below.
-     ===================================================================== -->
+<p>Welcome to my home page!</p>
 
-<!-- HTML: Interactive world map with three destination pins -->
+<p>I am going to showcase my three favorite places I have travelled to so far: Scotland, Italy, and Puerto Rico.</p>
+
+<!-- Interactive travel map -->
 <div class="showcase">
- 
-<svg viewBox="0 0 900 430" role="img" aria-label="Illustrated world map">
-  <rect width="900" height="430" rx="18" fill="#dcebf0"/>
 
-  <g fill="#b7cbb1" stroke="#91ad91" stroke-width="2.5" stroke-linejoin="round">
+  <div class="showcase-map">
 
-    <!-- North America -->
-    <path d="M55 105 L75 72 L112 49 L160 43 L191 65 L227 77
-    L248 105 L232 125 L211 143 L195 177 L164 195 L145 235
-    L112 215 L94 179 L69 158 L48 125 Z"/>
+    <!-- HTML: Illustrated world map -->
+    <svg viewBox="0 0 900 430" role="img"
+         aria-label="Illustrated world map showing Scotland, Italy, and Puerto Rico">
 
-    <!-- Greenland -->
-    <path d="M260 38 L300 20 L338 36 L330 75 L291 92 L265 72 Z"/>
+      <rect width="900" height="430" rx="18" fill="#dcebf0"/>
 
-    <!-- Central America -->
-    <path d="M180 208 L202 218 L218 242 L238 261 L230 277
-    L213 262 L196 244 L178 226 Z"/>
+      <!-- Map illustrations -->
+      <g fill="#b7cbb1" stroke="#91ad91"
+         stroke-width="2.5" stroke-linejoin="round">
 
-    <!-- South America -->
-    <path d="M229 265 L258 275 L278 305 L270 345 L252 390
-    L233 365 L220 326 L211 290 Z"/>
+        <!-- North America -->
+        <path d="M45 105 L60 72 L100 48 L150 40
+        L185 62 L225 77 L245 108 L225 130
+        L210 150 L195 180 L160 198 L135 235
+        L105 215 L90 180 L65 160 L45 125 Z"/>
 
-    <!-- Europe -->
-    <path d="M410 104 L432 83 L468 72 L498 82 L520 70
-    L554 77 L579 91 L610 86 L642 96 L672 90 L700 105
-    L727 122 L714 143 L681 147 L654 132 L627 150
-    L600 137 L578 153 L552 139 L530 156 L503 143
-    L480 160 L453 144 L430 157 L412 139 Z"/>
+        <!-- Greenland -->
+        <path d="M260 38 L300 20 L338 36
+        L330 75 L290 92 L265 72 Z"/>
 
-    <!-- Africa -->
-    <path d="M414 169 L447 155 L478 170 L499 206 L493 247
-    L471 294 L450 343 L426 329 L409 286 L390 241
-    L397 193 Z"/>
+        <!-- Central America -->
+        <path d="M160 205 L185 218 L205 240
+        L220 260 L210 270 L190 250 L175 230 Z"/>
 
-    <!-- Asia -->
-    <path d="M510 91 L548 73 L600 79 L645 94 L690 89
-    L735 112 L777 136 L810 160 L792 187 L755 194
-    L723 180 L689 195 L660 180 L628 195 L599 178
-    L568 195 L540 173 L516 149 L490 131 Z"/>
+        <!-- South America -->
+        <path d="M215 255 L250 265 L278 295
+        L275 330 L255 375 L240 410
+        L220 390 L210 350 L195 305 Z"/>
 
-    <!-- India and Southeast Asia -->
-    <path d="M605 201 L632 211 L648 244 L634 269
-    L617 246 L599 218 Z"/>
+        <!-- Europe -->
+        <path d="M410 105 L430 83 L455 70
+        L480 75 L500 90 L520 80 L545 85
+        L565 95 L590 90 L610 100
+        L590 120 L570 125 L550 140
+        L525 130 L510 145 L490 135
+        L470 150 L450 140 L430 155
+        L415 140 Z"/>
 
-    <!-- Australia -->
-    <path d="M710 290 L750 275 L790 291 L810 322
-    L784 347 L744 344 L713 321 Z"/>
+        <!-- United Kingdom and Ireland -->
+        <path d="M423 85 L432 75 L439 84
+        L435 100 L425 103 L420 95 Z"/>
 
-    <!-- Japan -->
-    <path d="M805 190 L817 204 L811 222 L801 211 Z"/>
+        <!-- Africa -->
+        <path d="M410 175 L445 155 L475 165
+        L495 195 L500 235 L480 285
+        L455 345 L430 330 L410 280
+        L390 235 L395 195 Z"/>
 
-  </g>
-</svg>
+        <!-- Asia -->
+        <path d="M510 90 L545 72 L590 78
+        L630 90 L675 85 L715 105
+        L755 125 L790 150 L775 180
+        L740 190 L705 175 L675 190
+        L640 175 L610 190 L580 175
+        L550 195 L525 175 L500 150
+        L485 130 Z"/>
 
+        <!-- India -->
+        <path d="M590 195 L615 205 L630 235
+        L615 265 L600 240 Z"/>
 
+        <!-- Southeast Asia -->
+        <path d="M650 220 L680 230 L700 250
+        L685 260 L660 245 Z"/>
 
-<!-- Footer: fill in your name -->
+        <!-- Australia -->
+        <path d="M710 290 L750 275 L790 290
+        L810 320 L785 345 L745 340
+        L710 320 Z"/>
+
+        <!-- Japan -->
+        <path d="M805 190 L815 205 L808 222
+        L800 210 Z"/>
+
+      </g>
+    </svg>
+
+    <!-- Scotland pin -->
+    <button type="button"
+      class="showcase-pin showcase-scotland"
+      data-place="Scotland"
+      aria-label="Scotland">
+      ●
+    </button>
+
+    <!-- Italy pin -->
+    <button type="button"
+      class="showcase-pin showcase-italy"
+      data-place="Italy"
+      aria-label="Italy">
+      ●
+    </button>
+
+    <!-- Puerto Rico pin -->
+    <button type="button"
+      class="showcase-pin showcase-pr"
+      data-place="Puerto Rico"
+      aria-label="Puerto Rico">
+      ●
+    </button>
+
+  </div>
+
+  <!-- Destination name appears here -->
+  <div class="showcase-result" aria-live="polite">
+    Click a pin to explore a destination!
+  </div>
+
+  <style>
+  /* CSS: Styles for the interactive map only */
+
+  .showcase {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+    font-family: Georgia, serif;
+  }
+
+  .showcase-map {
+    position: relative;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .showcase-map svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .showcase-pin {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 3px solid white;
+    border-radius: 50% 50% 50% 0;
+    background: #2b5d8c;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transform: translate(-50%, -100%) rotate(-45deg);
+    box-shadow: 0 2px 6px #5555;
+  }
+
+  .showcase-pin:hover {
+    background: #d49b42;
+    transform: translate(-50%, -100%) rotate(-45deg) scale(1.15);
+  }
+
+  .showcase-scotland {
+    left: 48%;
+    top: 34%;
+  }
+
+  .showcase-italy {
+    left: 51%;
+    top: 43%;
+  }
+
+  .showcase-pr {
+    left: 32%;
+    top: 55%;
+  }
+
+  .showcase-result {
+    margin-top: 12px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f4efe6;
+    color: #2b5d8c;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 24px;
+  }
+  </style>
+
+  <script>
+  // JavaScript: Shows the destination name when a pin is clicked
+
+  document.querySelectorAll(".showcase .showcase-pin")
+    .forEach(function(pin) {
+
+      pin.addEventListener("click", function() {
+
+        document.querySelector(".showcase-result").textContent =
+          "✈ " + pin.dataset.place;
+
+      });
+
+    });
+  </script>
+
+</div>
+
+<!-- Email link -->
+<p>Want to get in touch?
+<a href="mailto:ibenoit@zagmail.gonzaga.edu">Email me!</a></p>
+
+<!-- Footer -->
 <footer>Built by Islay Benoit &middot; BMIS 235</footer>
 
 </body>
