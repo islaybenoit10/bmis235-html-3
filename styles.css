@@ -22,6 +22,8 @@ nav {
     background-color: #2b5d8c;
     padding: 14px;
     text-align: center;
+    border-radius: 15px;
+}
 }
 
 /* every image inside the menu is forced to the same height.
