@@ -38,7 +38,125 @@
      This box is empty on purpose. In Part 7 you paste an interactive
      graphic BETWEEN the opening <div> and the closing </div> below.
      ===================================================================== -->
-<div class="showcase"></div>
+
+<!-- HTML: Interactive world map with three destination pins -->
+<div class="showcase">
+  <div class="showcase-map">
+    <svg viewBox="0 0 900 430" role="img" aria-label="Illustrated world map showing Scotland, Italy, and Puerto Rico">
+      <rect width="900" height="430" rx="18" fill="#dcebf0"/>
+
+      <!-- Simplified illustrated continents -->
+      <g fill="#b7cbb1" stroke="#91ad91" stroke-width="3">
+        <!-- North America -->
+        <path d="M70 85 L110 55 L170 45 L205 65 L250 80 L270 115 L240 145 L220 185 L185 205 L160 245 L125 225 L105 185 L75 160 L55 120 Z"/>
+        <!-- South America -->
+        <path d="M240 240 L280 250 L310 285 L305 325 L285 365 L270 410 L245 390 L230 345 L215 300 Z"/>
+        <!-- Europe and Asia -->
+        <path d="M405 90 L445 65 L490 70 L520 90 L565 75 L620 80 L665 95 L730 90 L785 120 L825 145 L805 180 L755 190 L720 175 L675 195 L640 180 L605 205 L565 185 L535 160 L505 175 L475 150 L450 165 L425 140 Z"/>
+        <!-- Africa -->
+        <path d="M420 190 L465 180 L510 205 L530 250 L510 300 L485 350 L455 340 L435 295 L415 245 Z"/>
+        <!-- Australia -->
+        <path d="M700 285 L745 270 L785 290 L800 325 L770 350 L730 345 L700 320 Z"/>
+        <!-- Greenland -->
+        <path d="M260 35 L300 20 L335 35 L325 75 L290 90 L265 70 Z"/>
+      </g>
+    </svg>
+
+    <!-- Scotland pin -->
+    <button class="showcase-pin showcase-scotland" data-place="Scotland" aria-label="Scotland">●</button>
+
+    <!-- Italy pin -->
+    <button class="showcase-pin showcase-italy" data-place="Italy" aria-label="Italy">●</button>
+
+    <!-- Puerto Rico pin -->
+    <button class="showcase-pin showcase-pr" data-place="Puerto Rico" aria-label="Puerto Rico">●</button>
+  </div>
+
+  <div class="showcase-result" aria-live="polite">
+    Click a pin to explore a destination!
+  </div>
+</div>
+
+<style>
+/* CSS: Styles only the interactive map */
+.showcase {
+  width: 100%;
+  max-width: 850px;
+  margin: 25px auto;
+  font-family: Georgia, serif;
+}
+
+.showcase-map {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #dcebf0;
+}
+
+.showcase-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.showcase-pin {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 3px solid white;
+  border-radius: 50% 50% 50% 0;
+  background: #2b5d8c;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transform: translate(-50%, -100%) rotate(-45deg);
+  box-shadow: 0 2px 6px #5555;
+}
+
+.showcase-pin:hover {
+  background: #d49b42;
+  transform: translate(-50%, -100%) rotate(-45deg) scale(1.15);
+}
+
+.showcase-scotland {
+  left: 49%;
+  top: 39%;
+}
+
+.showcase-italy {
+  left: 52.5%;
+  top: 46%;
+}
+
+.showcase-pr {
+  left: 32%;
+  top: 57%;
+}
+
+.showcase-result {
+  margin-top: 12px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f4efe6;
+  color: #2b5d8c;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 24px;
+}
+</style>
+
+<script>
+// JavaScript: Displays the selected destination when a pin is clicked
+document.querySelectorAll(".showcase .showcase-pin").forEach(function(pin) {
+  pin.addEventListener("click", function() {
+    document.querySelector(".showcase .showcase-result").textContent =
+      "✈ " + pin.dataset.place;
+  });
+});
+</script>
+
 
 <!-- Footer: fill in your name -->
 <footer>Built by Islay Benoit &middot; BMIS 235</footer>
