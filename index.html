@@ -41,121 +41,60 @@
 
 <!-- HTML: Interactive world map with three destination pins -->
 <div class="showcase">
-  <div class="showcase-map">
-    <svg viewBox="0 0 900 430" role="img" aria-label="Illustrated world map showing Scotland, Italy, and Puerto Rico">
-      <rect width="900" height="430" rx="18" fill="#dcebf0"/>
+ 
+<svg viewBox="0 0 900 430" role="img" aria-label="Illustrated world map">
+  <rect width="900" height="430" rx="18" fill="#dcebf0"/>
 
-      <!-- Simplified illustrated continents -->
-      <g fill="#b7cbb1" stroke="#91ad91" stroke-width="3">
-        <!-- North America -->
-        <path d="M70 85 L110 55 L170 45 L205 65 L250 80 L270 115 L240 145 L220 185 L185 205 L160 245 L125 225 L105 185 L75 160 L55 120 Z"/>
-        <!-- South America -->
-        <path d="M240 240 L280 250 L310 285 L305 325 L285 365 L270 410 L245 390 L230 345 L215 300 Z"/>
-        <!-- Europe and Asia -->
-        <path d="M405 90 L445 65 L490 70 L520 90 L565 75 L620 80 L665 95 L730 90 L785 120 L825 145 L805 180 L755 190 L720 175 L675 195 L640 180 L605 205 L565 185 L535 160 L505 175 L475 150 L450 165 L425 140 Z"/>
-        <!-- Africa -->
-        <path d="M420 190 L465 180 L510 205 L530 250 L510 300 L485 350 L455 340 L435 295 L415 245 Z"/>
-        <!-- Australia -->
-        <path d="M700 285 L745 270 L785 290 L800 325 L770 350 L730 345 L700 320 Z"/>
-        <!-- Greenland -->
-        <path d="M260 35 L300 20 L335 35 L325 75 L290 90 L265 70 Z"/>
-      </g>
-    </svg>
+  <g fill="#b7cbb1" stroke="#91ad91" stroke-width="2.5" stroke-linejoin="round">
 
-    <!-- Scotland pin -->
-    <button class="showcase-pin showcase-scotland" data-place="Scotland" aria-label="Scotland">●</button>
+    <!-- North America -->
+    <path d="M55 105 L75 72 L112 49 L160 43 L191 65 L227 77
+    L248 105 L232 125 L211 143 L195 177 L164 195 L145 235
+    L112 215 L94 179 L69 158 L48 125 Z"/>
 
-    <!-- Italy pin -->
-    <button class="showcase-pin showcase-italy" data-place="Italy" aria-label="Italy">●</button>
+    <!-- Greenland -->
+    <path d="M260 38 L300 20 L338 36 L330 75 L291 92 L265 72 Z"/>
 
-    <!-- Puerto Rico pin -->
-    <button class="showcase-pin showcase-pr" data-place="Puerto Rico" aria-label="Puerto Rico">●</button>
-  </div>
+    <!-- Central America -->
+    <path d="M180 208 L202 218 L218 242 L238 261 L230 277
+    L213 262 L196 244 L178 226 Z"/>
 
-  <div class="showcase-result" aria-live="polite">
-    Click a pin to explore a destination!
-  </div>
-</div>
+    <!-- South America -->
+    <path d="M229 265 L258 275 L278 305 L270 345 L252 390
+    L233 365 L220 326 L211 290 Z"/>
 
-<style>
-/* CSS: Styles only the interactive map */
-.showcase {
-  width: 100%;
-  max-width: 850px;
-  margin: 25px auto;
-  font-family: Georgia, serif;
-}
+    <!-- Europe -->
+    <path d="M410 104 L432 83 L468 72 L498 82 L520 70
+    L554 77 L579 91 L610 86 L642 96 L672 90 L700 105
+    L727 122 L714 143 L681 147 L654 132 L627 150
+    L600 137 L578 153 L552 139 L530 156 L503 143
+    L480 160 L453 144 L430 157 L412 139 Z"/>
 
-.showcase-map {
-  position: relative;
-  width: 100%;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #dcebf0;
-}
+    <!-- Africa -->
+    <path d="M414 169 L447 155 L478 170 L499 206 L493 247
+    L471 294 L450 343 L426 329 L409 286 L390 241
+    L397 193 Z"/>
 
-.showcase-map svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+    <!-- Asia -->
+    <path d="M510 91 L548 73 L600 79 L645 94 L690 89
+    L735 112 L777 136 L810 160 L792 187 L755 194
+    L723 180 L689 195 L660 180 L628 195 L599 178
+    L568 195 L540 173 L516 149 L490 131 Z"/>
 
-.showcase-pin {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  border: 3px solid white;
-  border-radius: 50% 50% 50% 0;
-  background: #2b5d8c;
-  color: white;
-  font-size: 12px;
-  cursor: pointer;
-  transform: translate(-50%, -100%) rotate(-45deg);
-  box-shadow: 0 2px 6px #5555;
-}
+    <!-- India and Southeast Asia -->
+    <path d="M605 201 L632 211 L648 244 L634 269
+    L617 246 L599 218 Z"/>
 
-.showcase-pin:hover {
-  background: #d49b42;
-  transform: translate(-50%, -100%) rotate(-45deg) scale(1.15);
-}
+    <!-- Australia -->
+    <path d="M710 290 L750 275 L790 291 L810 322
+    L784 347 L744 344 L713 321 Z"/>
 
-.showcase-scotland {
-  left: 49%;
-  top: 39%;
-}
+    <!-- Japan -->
+    <path d="M805 190 L817 204 L811 222 L801 211 Z"/>
 
-.showcase-italy {
-  left: 52.5%;
-  top: 46%;
-}
+  </g>
+</svg>
 
-.showcase-pr {
-  left: 32%;
-  top: 57%;
-}
-
-.showcase-result {
-  margin-top: 12px;
-  padding: 15px;
-  border-radius: 12px;
-  background: #f4efe6;
-  color: #2b5d8c;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  min-height: 24px;
-}
-</style>
-
-<script>
-// JavaScript: Displays the selected destination when a pin is clicked
-document.querySelectorAll(".showcase .showcase-pin").forEach(function(pin) {
-  pin.addEventListener("click", function() {
-    document.querySelector(".showcase .showcase-result").textContent =
-      "✈ " + pin.dataset.place;
-  });
-});
-</script>
 
 
 <!-- Footer: fill in your name -->
